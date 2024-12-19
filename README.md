@@ -35,7 +35,7 @@ When adding new pages, please follow these guidelines (check pre-existing pages 
 - Make sure that each markdown file has a title at the start (specified with `#`). The first title in the markdown file is what's going to show up in the webpage's search results
 - Related to the previous rule, but there should only be one `#` title per page, and that is the page's title. All other titles should start at `##`
 - Guides should include an info box before the title, listing the tools that they're using. Each tool mentioned in that box should be a link to a HedgeDocs page, which contains a link to said tool
-    - If the tools aren't included in the tools page, add them. If that doesn't make sense, then add the links to said tools in the info box. These links should not be direct download links, but a link to the tool's page, is applicable.
+    - If the tools aren't included in the tools page, add them. If that doesn't make sense, then add the links to said tools in the info box. These links should not be direct download links, but a link to the tool's page, if it exists.
     - This rule helps avoiding fragmentation of tool versions. By making every tool link point to a HedgeDocs tool page, you can be sure that everyone will download the version that HedgeDocs has stored in the tools category, and update it if necessary in the future.
 - When adding images or other files to a page, place the files in a folder inside the `assets` folder. Name the folder with the same name of the document file. Example file tree:
 ```
@@ -78,14 +78,17 @@ Result:
 
 
 ## Testing
-You can test your changes locally before committing. To do so:
+You can test your changes locally before committing. 
+To do so, follow the steps described below*:
 
-- Install [Python](https://www.python.org/downloads/)
-- Install Material For MkDocs: `pip install mkdocs-material --upgrade`
+- Download and install the latest version of [Python](https://www.python.org/downloads/)
+- Install Material For MkDocs: `pip install mkdocs-material==9.5.9 --upgrade`
 - Install necessary MkDocs Plugins
     - git-revision-date-localized-plugin: `pip install mkdocs-git-revision-date-localized-plugin --upgrade`
     - git-committers-plugin-2: `pip install mkdocs-git-committers-plugin-2 --upgrade`
 - Serve webpage locally: `mkdocs serve`
     - You can also build a static site instead, using `mkdocs build`
  
-The served webpage will auto refresh whenever you make changes to the files.
+After executing the last command (the serve command), you'll see an address where you can visit the website. By visiting that address in your browser of choice, you'll be able to see the local version of the website, as in, the version of the website that's currently on your computer. This webpage will auto refresh whenever you make changes to the files, so you can edit the files and see your edits live!
+
+\* *Text inside a codeblock is meant to be written and executed in a terminal/command prompt inside this project's directory. To simplify, if you're using Windows, open the project's folder in Windows Explorer and type "cmd" in the address bar.*

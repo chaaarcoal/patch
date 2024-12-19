@@ -80,7 +80,8 @@ nav:
         - Level Editing:
           - Sonic GLvl: guides/hedgehog-engine/blueblur/levels/glvl.md
           - Importing Terrain: guides/hedgehog-engine/blueblur/levels/importing-terrain.md
-          - Importing Collision: guides/hedgehog-engine/blueblur/levels/importing-collision.md        
+          - Importing Collision: guides/hedgehog-engine/blueblur/levels/importing-collision.md
+          - Custom Rank Times: guides/hedgehog-engine/blueblur/levels/custom-ranks.md     
           - Troubleshooting: guides/hedgehog-engine/blueblur/levels/troubleshooting.md         
         - File Locations: 
           - Sounds: guides/hedgehog-engine/blueblur/locations/sound.md
@@ -142,12 +143,20 @@ nav:
           - Gismos: docs/hedgehog-engine/rangers/obj/gismos.md
         - Scripts:
           - Functions: docs/hedgehog-engine/rangers/scripts/funcs.md
+      - Shadow Generations:
+        - Events:
+          - Event ID Map: docs/hedgehog-engine/miller/events/ids.md
+        - Levels:
+          - Level ID Map: docs/hedgehog-engine/miller/levels/ids.md
     - Sega NN:
       - Common:
         - NN Chunk Format:
           - docs/nn/common/chunk-format/index.md
-          - NODENAMELIST: docs/nn/common/chunk-format/nodenamelist.md
+          - Common Definitions: docs/nn/common/chunk-format/common-definitions.md
           - TEXLIST: docs/nn/common/chunk-format/texlist.md
+          - NODENAMELIST: docs/nn/common/chunk-format/nodenamelist.md
+          - MATERIALNAMELIST: docs/nn/common/chunk-format/materialnamelist.md
+          - MOTION: docs/nn/common/chunk-format/motion.md
   - Discoveries:
     - discoveries/index.md
     - Sonic Unleashed:
@@ -202,7 +211,7 @@ markdown_extensions:
   - tables
 extra_css:
   - web/stylesheets/extra.css
-  - web/stylesheets/amoled.css
+  - web/stylesheets/ultradark.css
   - web/stylesheets/dark.css
   - web/stylesheets/rangers.css
 extra_javascript:
@@ -242,18 +251,18 @@ theme:
   icon:
     edit: material/file-edit-outline
   palette:
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      toggle:
-        icon: material/brightness-4
-        name: Switch to AMOLED mode
     - media: "(prefers-color-scheme: light)"
       scheme: rangers
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
-      scheme: amoled
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to ultra dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: ultradark
       toggle:
         icon: material/brightness-2
         name: Switch to light mode
